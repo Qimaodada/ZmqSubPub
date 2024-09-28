@@ -1,0 +1,1 @@
+基于zeromq的pub_sub模式套接字封装进入ZeromqTrans类中pub_sub作为数据传输套接字，rep_req模式作为连接确认套接字。同步外部调用即可。发送调用函数sendData()，接收调用函数recvData()，目前只有服务端推出客户端重连时需要调用disconnect()函数。目前默认服务端与客户端能使用相同IP，startService需要传输本机地址，本机pub端口，本机check端口，startClient需要传入本机地址，本机pub端口，服务端对应的pub端口，服务端check端口。
